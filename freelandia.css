@@ -107,13 +107,13 @@ img{display:block;max-width:100%;}
 .btn.ghost{--b-bg:rgba(198,154,60,.12);--b-ink:#8a6c1d;--b-bd:rgba(198,154,60,.42);}
 /* TELEGRAM — brand blue, used in the header */
 .btn.tg{--b-bg:#229ed9;--b-ink:#ffffff;--b-bd:#229ed9;}
-.btn.tg svg{width:17px;height:17px;}
+.btn.tg svg{width:17px;height:17px;display:block;flex-shrink:0;}
 /* on a colored/dark hero */
 .btn.on-hero{--b-bg:var(--hero-ink);--b-ink:var(--hero-bg);--b-bd:var(--hero-ink);}
 .btn.ghost-hero{--b-bg:transparent;--b-ink:var(--hero-ink);--b-bd:var(--hero-line);}
 .btn.lg{font-size:16px;padding:17px 30px;}
 .btn.block{display:flex;width:100%;}
-.btn svg{width:16px;height:16px;}
+.btn svg{width:16px;height:16px;display:block;flex-shrink:0;}
 
 /* ---- keyword accent: red emphasis for scannable terms in long copy ---- */
 .kw{font-weight:600;color:var(--accent);}
@@ -144,6 +144,10 @@ img{display:block;max-width:100%;}
 .lang button:hover{color:var(--head-ink);}
 .lang button.on{background:var(--head-ink);color:var(--head-bg);}
 @media(max-width:820px){.nav{display:none;}}
+@media(max-width:520px){
+  .site-head .head-right .btn.tg .tg-label{display:none;}
+  .site-head .head-right .btn.tg{padding:9px 10px;gap:0;}
+}
 
 /* ---------- hero (accent / dark / light via tweak) ---------- */
 .hero{background:var(--hero-bg);color:var(--hero-ink);position:relative;overflow:hidden;}
